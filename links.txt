@@ -1,0 +1,6 @@
+https://towardsdatascience.com/generate-meaningful-word-clouds-in-python-5b85f5668eeb
+
+https://nanonets.com/blog/ocr-with-tesseract/#limitations-of-tesseract
+
+https://amueller.github.io/word_cloud/generated/wordcloud.WordCloud.html
+
