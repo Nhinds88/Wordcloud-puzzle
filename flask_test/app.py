@@ -1,3 +1,5 @@
+import random
+from templates.scripts.wcp import wcPuzzle
 from distutils.log import debug
 from flask import Flask, render_template, request, flash
 
@@ -6,8 +8,10 @@ app.secret_key = "funsecrects"
 
 @app.route("/hello")
 def index():
-	flash("what's your name?")
-	return render_template("index.html")
+    # flash("what's your name?")
+    choice = random.choice([1,2,3])
+    wcPuzzle(choice)
+    return render_template("index.html")
     
 @app.route("/greet", methods=["POST", "GET"])
 def greeter():
