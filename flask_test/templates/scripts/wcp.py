@@ -64,7 +64,7 @@ class wcPuzzle:
 
                 stopwords = set(w)
 
-                wc = WordCloud(background_color="black", prefer_horizontal= 1, max_words=200000, mask=image_mask,
+                wc = WordCloud(background_color="black", width=1000, height=800, prefer_horizontal= 1, max_words=200000, mask=image_mask,
                             stopwords=stopwords, max_font_size=20, random_state=0, scale=10)
                 # generate word cloud
                 wc.generate(txt)
@@ -95,7 +95,7 @@ class wcPuzzle:
 
                 stopwords = set(w)
 
-                wc = WordCloud(background_color="black", prefer_horizontal= 1, max_words=200000, mask=image_mask,
+                wc = WordCloud(background_color="black", width=1000, height=800, prefer_horizontal= 1, max_words=200000, mask=image_mask,
                             stopwords=stopwords, max_font_size=20, random_state=0, scale=10)
                 # generate word cloud
                 wc.generate(txt)
@@ -116,50 +116,3 @@ class wcPuzzle:
                 break
             print("Error in Download")
             break
-        # for i in range(1):
-        #     attempts = i
-        #     while True:
-        #         try:
-                    
-        #             res = quote(w, limit=1)
-        #             for i in range(len(res)):
-        #                 txt = res[i]['quote']
-        #             print(txt)
-                        
-        #             downloader.download(w, limit=4,  output_dir='images', adult_filter_off=True, force_replace=False, timeout=120, filter='transparent', verbose=True)
-
-        #             # read the mask / color image taken from
-        #             image_coloring = np.array(Image.open(os.path.join("images/"+w+"/Image_1.png")))
-        #             image_coloring = image_coloring[::3, ::3]
-        #             image_mask = image_coloring.copy()
-        #             image_mask[image_mask.sum(axis=2) ==0] = 255
-
-        #             edges = np.mean([gaussian_gradient_magnitude(image_coloring[:, :, i] / 255., 2) for i in range(3)], axis=0)
-        #             image_mask[edges > 0.08] = 255
-
-        #             stopwords = set(w)
-
-        #             wc = WordCloud(background_color="transparent", prefer_horizontal= 1, max_words=200000, mask=image_mask,
-        #                         stopwords=stopwords, max_font_size=20, random_state=0, scale=10)
-        #             # generate word cloud
-        #             wc.generate(txt)
-
-        #             image_colors = ImageColorGenerator(image_coloring)
-        #             wc.recolor(color_func=image_colors)
-
-        #             img = wc.to_image()
-        #             img.show()
-        #             img = img.save("temp.png")
-
-        #             def handler(func, path, exc_info):
-        #                 print("Inside handler")
-        #                 print(exc_info)
-                        
-        #             path = 'images'
-        #             shutil.rmtree(path, onerror= handler)
-        #         except:
-        #             i=0
-        #             attempts-=1
-        #             continue
-        #         print('try '+str(i), 'attemps '+str(attempts))
-        #         break

@@ -1,27 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Monofett&display=swap');
 body {
     text-align: center;
-    background-color: SlateGrey;
+    background-color: black;
 }
-p {
+h1 {
     color: white;
     font-family: Shanti;
-    font-size: 1.2em;
-    display: inline-block;
     margin:  20px;
 }
+.landing-title {
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: center;
+}
 img {
-    margin: 60px 0 30px 0;
-    width: 250px;
+    width:600px;
+    height:400px;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+.img-info {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.img-hover-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+button {
+    font-family: 'Major Mono Display', monospace;
+    width: 300px;
+    margin: 20px 20px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3em;
+    text-align: center;
 }
 input {
-  width: 300px;
-  margin: 20px 20px;
-  height: 50px;
-  border: none;
-  border-radius: 10px;
-  font-family: Shanti;
-  font-size: 1.3em;
-  text-align: center;
+    width: 300px;
+    margin: 20px 20px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: Shanti;
+    font-size: 1.3em;
+    text-align: center;
 }
 
 input:focus {
@@ -29,8 +85,32 @@ input:focus {
     border: solid 5px #00FFCE;
 }
 
+#titlescreen {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box1 {
+    float: right;
+    width: 70%;
+    margin: 0 auto;
+    height: 400px;
+}
+
+.box2 {
+    float: left;
+    width: 25%;
+    height: 400px;
+}
+
+.startbtn {
+    top: 90%;
+    width: 100%;
+    justify-content: center;
+}
+
 #greet {
-    background-color: PaleVioletRed;
+    background-color: #702947;
     border:  none;
     width:  200px;
     color: white;
@@ -38,4 +118,45 @@ input:focus {
 
 #greet:hover {
     background-color: MediumVioletRed;
+}
+
+#welcome {
+    font-family: 'Major Mono Display', monospace;
+    color: white;
+    font-size: 0.8em;
+    text-align: left;
+}
+
+.cloud-text {
+	font-family: 'Monofett', cursive;
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;	
+	background-image: url(https://live.staticflickr.com/65535/51932206823_981c8167b6_o.jpg);
+	background-size: auto;
+	background-attachment: unset;
+	background-position: 0%;
+	width: 80%;
+	margin: 0%;
+	font-size: 100px;
+	animation: clouds-moving infinite 180s;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	animation-timing-function: linear;
+	text-align: center;
+}
+@keyframes clouds-moving {
+	0% {
+		background-position: 0%;	
+	}
+	50% {
+		background-position: 100%;	
+	}
+	100% {
+		background-position: 0%;
+	}
+}
+.attribute {
+	position: relative;
+	font-size: 18px;
+	text-align: center;
 }

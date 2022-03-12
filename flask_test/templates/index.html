@@ -2,20 +2,49 @@
 <html>
     <head>
         <meta charset="UTF-8" content>
-        <title>Say Hello</title>
+        <title>Puzzling Clouds</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
     </head>
     <body>
-        <img src="https://raw.githubusercontent.com/MariyaSha/SimpleGreetingApp/main/logo.png">
-        <br>
-        <form action="greet"method="post">
-            {% for message in get_flashed_messages() %}
-                <p>{{ message }}</p>
-            {% endfor %}
-            <br>
-            <input type="text" name="name_input">
-            <br>
-            <input type="submit" value="GREET" id="greet">
-        </form>
+        <div class="landing-title">
+            <p class="cloud-text cloud-title">Cluzzle</p>
+        </div>
+        <div id="titlescreen">
+            <div class="box1">
+                <div class="container">
+                    <img class="img-info" src="/static/images/starterimg.png" align="left">
+                    <br>
+                    <!-- <form action="greet"method="post">
+                        {% for message in get_flashed_messages() %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                        <br>
+                        <input type="text" name="name_input">
+                        <br>
+                        <input type="submit" value="Start" id="greet">
+                    </form> -->
+                    <div class="middle">
+                        <p class="img-hover-info">The word used to create this word cloud is Wordcloud!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <p id="welcome"><strong>Welcome to Cluzzle!</strong> <br> The goal of the game is to guess the single word the word cloud above is created from. The text in the cloud is made up from quotes about the word we trying to guess and the cloud is in the shape of a random image pulled based off the word as well. <br> You will get four guesses and after each quess the image will change and the quoted text in the cloud will change as well. <br> If you feel the need there will be several hints you can use. <br><br>
+                     1. Wiki Button: provides a small portion of the wiki entry for the word. <br> 
+                     2. Letter Count Button: provides the number of letters in the word. <br> 
+                     3. Synonym Button: will provide a synonym for the word.</p>
+            </div>
+            <div class="startbtn">
+                <button id="greet" class="btn-info">Start</button>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="startbtn">
+                <button id="greet" class="btn-info">Start</button>
+            </div>
+            <div class="lower">
+                <p class="btn-hover-info">Lets Cluzzle!</p>
+            </div>
+        </div>    -->
     </body>
 </html>
